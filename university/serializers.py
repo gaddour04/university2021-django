@@ -13,7 +13,7 @@ class UniversitytGetSerializer(serializers.ModelSerializer):
 	#formation= serializers.StringRelatedField(many=True)
 
 	class Meta:
-		model=University
+		model=Universitie
 		fields='__all__'
 		depth=1
 
@@ -22,7 +22,7 @@ class UniversitytPostSerializer(serializers.ModelSerializer):
 	#formation= serializers.StringRelatedField(many=True)
 
 	class Meta:
-		model=University
+		model=Universitie
 		fields='__all__'
 		
 

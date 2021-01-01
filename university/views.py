@@ -41,20 +41,20 @@ class FormationAPIDetail(RetrieveUpdateDestroyAPIView):
 
 
 class GetAllUniversityAPI(ListAPIView):
-	queryset=University.objects.all()
+	queryset=Universitie.objects.all()
 	serializer_class=UniversitytGetSerializer
 
 class CreateUniversityAPI(CreateAPIView):
-	queryset=University.objects.all()
+	queryset=Universitie.objects.all()
 	serializer_class=UniversitytPostSerializer
 
 class UpdateUniversityAPI(RetrieveUpdateAPIView):
-	queryset=University.objects.all()
+	queryset=Universitie.objects.all()
 	serializer_class=UniversitytGetSerializer
 	lookup_field='id'
 
 class DeleteUniversityAPI(RetrieveDestroyAPIView):
-	queryset=University.objects.all()
+	queryset=Universitie.objects.all()
 	serializer_class=UniversitytGetSerializer
 	lookup_field='id'
 
