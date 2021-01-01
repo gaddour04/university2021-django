@@ -8,8 +8,23 @@ class FormationtSerializer(serializers.ModelSerializer):
 		fields='__all__'
 
 
-class UniversitytSerializer(serializers.ModelSerializer):
+
+class UniversitytGetSerializer(serializers.ModelSerializer):
+	#formation= serializers.StringRelatedField(many=True)
+
 	class Meta:
 		model=University
 		fields='__all__'
 		depth=1
+
+
+class UniversitytPostSerializer(serializers.ModelSerializer):
+	#formation= serializers.StringRelatedField(many=True)
+
+	class Meta:
+		model=University
+		fields='__all__'
+		
+
+
+

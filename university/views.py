@@ -11,9 +11,25 @@ from rest_framework.generics import *  #ListAPIView,ListCreateAPIView,RetrieveUp
 
 
 
-class FormationAPI(ListCreateAPIView):
+class GetAllFormationAPI(ListAPIView):
 	queryset=Formation.objects.all()
 	serializer_class=FormationtSerializer
+
+class CreateFormationAPI(CreateAPIView):
+	queryset=Formation.objects.all()
+	serializer_class=FormationtSerializer
+
+
+class DeleteFormationAPI(RetrieveDestroyAPIView):
+	queryset=Formation.objects.all()
+	serializer_class=FormationtSerializer
+	lookup_field='id'
+
+class UpdateFormationAPI(RetrieveUpdateAPIView):
+	queryset=Formation.objects.all()
+	serializer_class=FormationtSerializer
+	lookup_field='id'
+
 
 
 #iraja3 resultat w ya3mel update w ifasakh
@@ -24,13 +40,22 @@ class FormationAPIDetail(RetrieveUpdateDestroyAPIView):
 
 
 
-class UniversityAPI(ListCreateAPIView):
+class GetAllUniversityAPI(ListAPIView):
 	queryset=University.objects.all()
-	serializer_class=UniversitytSerializer
+	serializer_class=UniversitytGetSerializer
 
-class UniversityAPIDetail(RetrieveUpdateDestroyAPIView):
+class CreateUniversityAPI(CreateAPIView):
 	queryset=University.objects.all()
-	serializer_class=UniversitytSerializer
+	serializer_class=UniversitytPostSerializer
+
+class UpdateUniversityAPI(RetrieveUpdateAPIView):
+	queryset=University.objects.all()
+	serializer_class=UniversitytGetSerializer
+	lookup_field='id'
+
+class DeleteUniversityAPI(RetrieveDestroyAPIView):
+	queryset=University.objects.all()
+	serializer_class=UniversitytGetSerializer
 	lookup_field='id'
 
 
